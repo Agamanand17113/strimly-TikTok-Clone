@@ -1,73 +1,92 @@
-# Welcome to your Lovable project
+# 📱 Strmly - TikTok-Style Video Feed App
 
-## Project info
+A complete React web application that mimics TikTok's vertical video feed experience, built with modern web technologies and ready for mobile deployment via Capacitor.
 
-**URL**: https://lovable.dev/projects/5999b7d9-9d02-4604-aa4d-3ad664f419e9
+## ✨ Features
 
-## How can I edit this code?
+- 🔐 **Authentication System** - Google Sign-In simulation (Firebase-ready)
+- 🎥 **Vertical Video Feed** - TikTok-style scrolling with autoplay/pause
+- ❤️ **Like System** - Animated heart reactions with real-time counts
+- 👤 **User Profiles** - Complete profile management
+- 🔽 **Bottom Navigation** - 5-tab mobile-optimized navigation
+- 🎨 **Dark Theme** - Modern TikTok-inspired design system
+- 📱 **Mobile-First** - Responsive design optimized for mobile
 
-There are several ways of editing your application.
+## 🚀 Quick Start
 
-**Use Lovable**
+1. **Development Server**
+   ```bash
+   npm run dev
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5999b7d9-9d02-4604-aa4d-3ad664f419e9) and start prompting.
+2. **Login** - Use the demo Google login button
+3. **Navigate** - Use bottom tabs to explore different screens
+4. **Interact** - Like videos, scroll through the feed
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📱 Mobile Deployment (Capacitor)
 
-**Use your preferred IDE**
+To deploy as a native mobile app:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Install Capacitor**
+   ```bash
+   npm install @capacitor/core @capacitor/cli @capacitor/ios @capacitor/android
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Initialize**
+   ```bash
+   npx cap init
+   ```
 
-Follow these steps:
+3. **Build & Sync**
+   ```bash
+   npm run build
+   npx cap add ios android
+   npx cap sync
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+4. **Run on Device**
+   ```bash
+   npx cap run ios
+   npx cap run android
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🔧 Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Frontend**: React + TypeScript + Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+- **State Management**: React Hooks + localStorage
+- **Animations**: Custom CSS animations
+- **Mobile**: Capacitor-ready
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 🎨 Design System
+
+- **Colors**: TikTok-inspired dark theme with pink/blue accents
+- **Animations**: Smooth transitions and micro-interactions
+- **Layout**: Mobile-first responsive design
+- **Typography**: Modern font hierarchy
+
+## 🔗 Firebase Integration
+
+Ready for Firebase integration:
+1. Update `src/firebase/config.ts` with your Firebase config
+2. Uncomment Firebase auth code
+3. Replace demo auth with real Firebase Authentication
+4. Connect Firestore for user data and video metadata
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   ├── VideoPlayer.tsx      # Main video component
+│   ├── VideoFeed.tsx        # Scrollable video feed
+│   ├── BottomNavigation.tsx # Mobile navigation
+│   ├── AuthScreen.tsx       # Login interface
+│   └── screens/            # App screens
+├── assets/                 # Video thumbnails
+├── firebase/              # Firebase config
+└── hooks/                # Custom React hooks
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5999b7d9-9d02-4604-aa4d-3ad664f419e9) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Built with ❤️ using Lovable
